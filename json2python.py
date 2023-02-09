@@ -9,13 +9,14 @@ f = open('data.json')
 data = json.load(f)
 
   
-# #iterating through the json list
+#iterating through the json list
 # for i in data['offset']:
 #     print(i)
-#   
+  
 
-#get value Z from index 0 
-print(data["offset"][0]["Z"])
+#get value Z at offset index 0 and layer index 1 
+print(data["offset"][0]["layer"][1]["Z"])
+
 
 #closing file
 f.close()
