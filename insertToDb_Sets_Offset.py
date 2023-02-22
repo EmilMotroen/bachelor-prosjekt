@@ -24,16 +24,19 @@ with InfluxDBClient(url="http://127.0.0.1:8086", token=token, org=org, timeout=3
     data = []
     
     for i in range(number_of_points):
+        
+        #setting XYZ values before the offset
         xGlobal = float(input(f"Set {i+1}: X: "))
         yGlobal = float(input(f"Set {i+1}: Y: "))
-        zGlobal = float(input(f"Set {i+1}: Z: "))
+#         zGlobal = float(input(f"Set {i+1}: Z: "))
+        #setting Z to 0
+        zGlobal = float(0)
         
-        try:
-            xGlobal += float(jsondata["offset"][0]["layer"][i]["X"])
-            yGlobal += float(jsondata["offset"][0]["layer"][i]["Y"])
-            zGlobal += float(jsondata["offset"][0]["layer"][i]["Z"])
-        except KeyError:
-            print(f"Error: key not found for index {i}")
+        #adding offset from json
+        xGlobal += float(jsondata["offset"][0]["layer"][i]["X"])
+        yGlobal += float(jsondata["offset"][0]["layer"][i]["Y"])
+        zGlobal += float(jsondata["offset"][0]["layer"][i]["Z"])
+
         
         print(f"Set {i+1} after offset: X: ", xGlobal)
         print(f"Set {i+1} after offset: Y: ", yGlobal)
@@ -53,4 +56,5 @@ with InfluxDBClient(url="http://127.0.0.1:8086", token=token, org=org, timeout=3
     write_api.flush()
 
 client.close()
+
 
