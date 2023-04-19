@@ -72,12 +72,13 @@ def get_offset():
 
 
     #submit button that calls the submit_values function
-    tk.Button(window, text="Submit", command=submit_offset).grid(row=3, column=1)
+    tk.Button(window, text = "Submit", command = submit_offset).grid(row = 3, column = 1)
 
     #start the main event loop
     window.mainloop()
     
 #call method to get the offset values
 get_offset()
+
 
 
