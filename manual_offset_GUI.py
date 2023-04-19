@@ -1,3 +1,6 @@
+"""
+GUI for getting X,Y,Z offset values
+"""
 import tkinter as tk
 
 
@@ -57,4 +60,5 @@ def get_offset():
     
 #call method to get the offset values
 get_offset()
+
 
