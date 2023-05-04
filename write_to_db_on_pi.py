@@ -10,7 +10,7 @@ from configparser import ConfigParser
 # Read influx login from config
 config_object = ConfigParser()
 config_object.read("config.ini")
-login = config_object["LOGIN"]
+login = config_object["INFLUXDB"]
 url = login["url"]
 bucket = login["bucket"]
 token = login["token"]
