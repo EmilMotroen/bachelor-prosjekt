@@ -1,10 +1,11 @@
 """
-Connect tracking program to InfluxDB on RPi 
+Connect tracking program to InfluxDB on RPi or PC 
     Make sure you are on the same network as RPi
     Can make error if no points on each layer
-    Tracking from layer 0 to num_layers
-
+    Tracking from layer 0 to pixel_layers
+    See config.ini for configuration
     Visualisation is upside down from real life
+
 """
 
 import pandas as pd
