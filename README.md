@@ -1,2 +1,2 @@
 # bachelor-prosjekt
-Diverse kildekode og filer for bruk i bachelorprosjektet
+Various source code and files used for a bachelor project. Some things may be in Norwegian.
